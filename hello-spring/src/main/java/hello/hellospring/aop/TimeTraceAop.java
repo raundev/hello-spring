@@ -13,6 +13,7 @@ public class TimeTraceAop {
     public Object execute(ProceedingJoinPoint joinPoint) throws Throwable{
 
         long start = System.currentTimeMillis();
+        //이것은 시작을 보여줍니다.
         System.out.println("START : " + joinPoint.toString());
         try{
             return joinPoint.proceed();
